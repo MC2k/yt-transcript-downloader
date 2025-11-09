@@ -1,0 +1,14 @@
+
+version: '3.8'
+
+services:
+  app:
+    image: yt-transcript-downloader:latest
+    container_name: yt-transcript-downloader
+    ports:
+      - "3001:3000"
+      - "8000:8000"
+    environment:
+      - NODE_ENV=production
+      - FLASK_ENV=production
+    restart: unless-stopped

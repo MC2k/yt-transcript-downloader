@@ -1,0 +1,6 @@
+"""Requirements file for yt_transcript_downloader.
+
+This is the minimal set of dependencies required for the module.
+"""
+
+requests>=2.25.0

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#
+# Python wrapper script for yt_whisper_cli project
+# This ensures we always use the correct Python environment
+#
+
+# Get the script directory
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Use the configured Python executable
+PYTHON_CMD="/opt/homebrew/bin/python3.11"
+
+# Check if Python executable exists
+if [ ! -f "$PYTHON_CMD" ]; then
+    echo "Error: Python executable not found at $PYTHON_CMD"
+    echo "Please update the PYTHON_CMD variable in this script"
+    exit 1
+fi
+
+# Execute the Python script with all arguments passed through
+exec "$PYTHON_CMD" "$@"
