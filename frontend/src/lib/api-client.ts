@@ -1,6 +1,6 @@
 import { TranscriptResponse } from "@/types";
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5000";
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8000";
 
 export async function fetchTranscript(url: string): Promise<TranscriptResponse> {
   try {
