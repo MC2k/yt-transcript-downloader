@@ -3,6 +3,11 @@ version: '3.8'
 
 services:
   app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_BACKEND_URL: ${NEXT_PUBLIC_BACKEND_URL}
     image: yt-transcript-downloader:latest
     container_name: yt-transcript-downloader
     ports:
